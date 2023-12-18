@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyWhenOutOfBounds : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Screen Limit")
+        if (other.CompareTag("Screen Limit"))
             Destroy(gameObject);
     }
 }

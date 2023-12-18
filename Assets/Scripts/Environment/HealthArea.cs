@@ -9,8 +9,8 @@ public class HealthArea : MonoBehaviour
 
     void OnTriggerStay2D (Collider2D other) 
     {
-        if (other.tag == "Player") {
-            PlayerHPManager hpManager = other.GetComponent<PlayerHPManager>();
+        if (other.CompareTag("TargetableEntity")) {
+            HpManager hpManager = other.GetComponent<HpManager>();
 
             if (isDamaging) 
                 hpManager.TakeDamage(healthAmount * Time.deltaTime);

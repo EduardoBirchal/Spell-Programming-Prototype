@@ -33,7 +33,9 @@ public class PlayerShoot : MonoBehaviour
         Vector3 rotation = mousePos - transform.position;
 
         float rotationDegrees = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, rotationDegrees));
+        GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, rotationDegrees));
+
+        newBullet.GetComponent<HandleHit>().caster = transform.parent.gameObject;
 
         isLoaded = false;
     }

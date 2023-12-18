@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Screen Limit
   - Enemy
+  - TargetableEntity
   layers:
   - Default
   - TransparentFX

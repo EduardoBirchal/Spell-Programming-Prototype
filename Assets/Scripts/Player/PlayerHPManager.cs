@@ -3,30 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHPManager : MonoBehaviour
+public class PlayerHpManager : HpManager
 {
-    public float currentHp;
-    public float maxHp;
     [SerializeField] private Image healthBar;
 
-    void Start()
+    public override void TakeDamage(float amount) 
     {
-        currentHp = maxHp;
-    }
-
-    public void TakeDamage(float amount) 
-    {
-        currentHp -= amount;
-        currentHp = Mathf.Clamp(currentHp, 0, maxHp);
-
+        ChangeHp (amount * -1);
         UpdateHealthBar();
     }
 
-    public void Heal(float amount)
+    public override void Heal(float amount)
     {
-        currentHp += amount;
-        currentHp = Mathf.Clamp(currentHp, 0, maxHp);
-
+        ChangeHp (amount);
         UpdateHealthBar();
     }
 
