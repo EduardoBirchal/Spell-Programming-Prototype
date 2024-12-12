@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8f60958dfb86440879a015ac488362, type: 3}
   m_Name: DamageEffect
   m_EditorClassIdentifier: 
-  basePower: 0
-  manaCost: 0
+  basePower: 5
+  baseCost: 5

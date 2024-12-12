@@ -5,12 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GenericGlyph", menuName = "ScriptableObjects/GenericGlyph")]
 public class GenericGlyph : ScriptableObject
 {
-    public float manaCost;
-
-    public virtual float CalculateCost() { return manaCost; }
+    public virtual float ManaCost { get; set; }
 
     public virtual float ApplyModifiers(List<GenericModifier> modifiers) {
-        float newCost = manaCost;
+        float newCost = ManaCost;
 
         if (modifiers != null) {
             foreach (GenericModifier modifier in modifiers) {

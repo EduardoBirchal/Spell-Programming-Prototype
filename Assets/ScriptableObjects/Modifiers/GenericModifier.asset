@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86797edae6cbb064fa959a38a0554f39, type: 3}
-  m_Name: HealEffect
+  m_Script: {fileID: 11500000, guid: 6ffb1ce4d0c95bf439412e16d626320f, type: 3}
+  m_Name: GenericModifier
   m_EditorClassIdentifier: 
-  basePower: 8
-  baseCost: 8
+  manaValue: 0
+  associatedScript: {fileID: 0}

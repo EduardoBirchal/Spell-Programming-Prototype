@@ -1,13 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SpellProgramming;
 
 [CreateAssetMenu(fileName = "MoteMould", menuName = "ScriptableObjects/Moulds/MoteMould")]
-public class MoteMould : ScriptableObject
+public class MoteMould : GenericMould
 {
-    public float cost;
 
-    public float CalculateCost(GenericEffect effect) {
-        return cost + effect.CalculateCost();
-    }
 }

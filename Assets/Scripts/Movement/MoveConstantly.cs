@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveConstantly : MonoBehaviour
 {
     public float moveSpeed;
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     void Start()
     {
@@ -14,6 +14,6 @@ public class MoveConstantly : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = transform.right * moveSpeed * Time.deltaTime;
+        rb.velocity = moveSpeed * Time.deltaTime * transform.right;
     }
 }

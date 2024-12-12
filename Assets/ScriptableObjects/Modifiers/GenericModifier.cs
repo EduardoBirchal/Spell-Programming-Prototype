@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GenericModifier", menuName = "ScriptableObjects/Modifiers/GenericModifier")]
 public class GenericModifier : ScriptableObject
 {
-    public float manaValue;
+    public float basePower, manaValue;
+    public ModifierScript associatedScript;
     
     public virtual float ModifyCost(float baseCost) { return baseCost * manaValue; }
 }

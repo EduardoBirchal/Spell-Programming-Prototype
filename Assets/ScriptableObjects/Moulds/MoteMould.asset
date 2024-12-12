@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a124b11c8795ba4f8f9b2d156e0b4e4, type: 3}
   m_Name: MoteMould
   m_EditorClassIdentifier: 
-  cost: 0
+  associatedObject: {fileID: 8571261559376807433, guid: 59245b25d8d47ee4b840e70d5f956f70, type: 3}
+  baseCost: 6
+  baseMultiplier: 1

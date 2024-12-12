@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using Unity.VisualScripting;
+using System.Runtime.InteropServices;
 
 public class HpManager : MonoBehaviour
 {
     public float currentHp;
     public float maxHp;
+    public TMP_Text dummyTest; // DEBUG
+    private static readonly string dummyTestText = "Dummy HP: "; // DEBUG
 
     void Start()
     {
@@ -16,6 +21,9 @@ public class HpManager : MonoBehaviour
     {
         currentHp += amount;
         currentHp = Mathf.Clamp(currentHp, 0, maxHp);
+
+        if (dummyTest != null)
+            dummyTest.text = dummyTestText + currentHp; // DEBUG
     }
 
     public virtual void TakeDamage (float amount) 
